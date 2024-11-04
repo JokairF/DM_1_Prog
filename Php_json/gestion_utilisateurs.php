@@ -3,6 +3,9 @@ $utilisateurs = [];
 if (file_exists('utilisateurs.json')) {
     $utilisateurs = lireUtilisateurs();
 }
+if (!is_array($utilisateurs)) {
+    $utilisateurs = [];
+}
 // Lire les données depuis le fichier JSON
 function lireUtilisateurs()
 {
